@@ -115,3 +115,7 @@ alias emptytrash=" \
 alias ding="tput bel"
 
 alias exit='sh ~/.dotfiles/see-you.sh; sleep 2; exit'
+
+# Switch between minikube and docker contexts
+alias minikube-context='eval $(minikube docker-env)'
+alias docker-context='eval $(docker-machine env -u)'

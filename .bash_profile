@@ -80,8 +80,4 @@ source "$(brew --prefix)/etc/bash_completion.d/brew"
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
 
-# Use DuoConnect for arc
-alias arc='duoconnect -arc -relay phab.duosec.org arc'
-
-# For ykpiv-ssh-agent
-export SSH_AUTH_SOCK=~/.ssh/ykpiv-sock
+export BASH_SILENCE_DEPRECATION_WARNING=1

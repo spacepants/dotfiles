@@ -28,6 +28,9 @@ alias slack='open -a "Slack"'
 alias music='open -a "Google Play Music Desktop Player"'
 alias gitkraken='open -a "GitKraken"'
 
+# Checksums
+alias sha256sum='shasum -a 256'
+alias sha512sum='shasum -a 512'
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

@@ -97,6 +97,7 @@ alias trimcopy="tr -d '\n' | pbcopy"
 
 # Shortcuts
 alias g="git"
+alias k="kubectl"
 alias v="vim"
 alias ungz="gunzip -k"
 

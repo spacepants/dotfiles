@@ -27,7 +27,7 @@ alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.c
 alias slack='open -a "Slack"'
 alias music='open -a "Google Play Music Desktop Player"'
 alias gitkraken='open -a "GitKraken"'
-alias zoom='open -a "zoom.us"'
+
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

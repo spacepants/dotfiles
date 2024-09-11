@@ -1,0 +1,16 @@
+## prompt
+# starship
+eval "$(starship init $CURRENT_SHELL)"
+
+## everything else
+# Devbox
+eval "$(devbox global shellenv --init-hook)"
+
+# The Fuck
+eval "$(thefuck --alias)"
+
+# Zoxide
+eval "$(zoxide init --cmd cd $CURRENT_SHELL)"
+
+# pyenv
+eval "$(pyenv init --path)"

@@ -1,0 +1,6 @@
+/.git
+/.gitignore
+/.osx
+/*.md
+/*.sh
+/init/*

@@ -1,0 +1,8 @@
+## Completions
+
+# devbox
+source <(devbox completion $CURRENT_SHELL)
+# docker
+source <(docker completion $CURRENT_SHELL)
+# kubectl
+source <(kubectl completion $CURRENT_SHELL)

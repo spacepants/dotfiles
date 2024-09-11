@@ -1,25 +1,9 @@
-# Add my bins
-PATH=$PATH:~/bin
-# Add in git-friendly
-PATH=$PATH:~/code/git-friendly
-export PATH
-
-# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
-# ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+# Load ~/.extra, ~/.exports, ~/.completions, ~/.aliases, ~/.functions, and ~/.init_hooks
+# ~/.extra is used for settings i don’t want to commit
+for file in ~/.{extra,exports,completions,aliases,functions,init_hooks}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
-
-# generic colourizer
-GRC=`which grc`
-if [ "$TERM" != dumb ] && [ -n "$GRC" ]; then
-  alias colourify="$GRC -es --colour=auto"
-  alias configure='colourify ./configure'
-  for app in {diff,make,gcc,g++,netstat,ping,traceroute}; do
-    alias "$app"="colourify $app"
-  done
-fi
 
 ##
 ## gotta tune that bash_history…
@@ -50,9 +34,6 @@ shopt -s cmdhist
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-# Always enable colored `grep` output
-export GREP_OPTIONS="--color=auto"
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -69,19 +50,8 @@ for option in autocd globstar; do
   shopt -s "$option" 2> /dev/null
 done
 
-##
-## Completion…
-##
-
 # homebrew completion
 source "$(brew --prefix)/etc/bash_completion.d/brew"
 
-# gcloud completion
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
-
-# Add tab completion for `defaults read|write NSGlobalDomain`
-# You could just use `-g` instead, but I like being explicit
-complete -W "NSGlobalDomain" defaults
 
 export BASH_SILENCE_DEPRECATION_WARNING=1

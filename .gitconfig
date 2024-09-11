@@ -19,6 +19,10 @@
   frag = magenta bold
   old = red bold
   new = green bold
+[color "grep"]
+  linenumber = yellow bold
+  match = red
+  filename = magenta
 [color "status"]
   added = yellow
   changed = green
@@ -50,3 +54,12 @@
   protocol = https
 [credential]
   helper = osxkeychain
+[core]
+  excludesfile = /Users/pbailey/.gitignore_global
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[init]
+  defaultBranch = main

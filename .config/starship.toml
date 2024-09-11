@@ -1,0 +1,119 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = true
+command_timeout = 1000
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$fill\
+$kubernetes\
+$docker_context\
+$container\
+$golang\
+$helm\
+$nodejs\
+$opa\
+$python\
+$ruby\
+$rust\
+$terraform\
+$nix_shell\
+$cmd_duration\
+$jobs\
+$time\
+$line_break\
+$shell\
+$character"""
+
+
+[aws]
+disabled = true
+symbol = "  "
+
+[azure]
+disabled = true
+symbol = "  "
+
+[character]
+error_symbol = "[⌘](bold red)"
+success_symbol = "[⌘](bold green)"
+
+[cmd_duration]
+min_time = 5000
+
+[directory]
+read_only = " 󰌾"
+truncate_to_repo = false
+
+[docker_context]
+symbol = " "
+
+[fill]
+symbol = " "
+
+[gcloud]
+disabled = true
+symbol = "  "
+
+[git_branch]
+disabled = false
+ignore_branches = ["master", "main"]
+symbol = " "
+
+[git_status]
+disabled = false
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+staged = '[+\($count\)](green)'
+stashed = ""
+style = "bold purple"
+up_to_date = "✓"
+
+[golang]
+disabled = true
+
+[hostname]
+ssh_symbol = " "
+
+[kubernetes]
+disabled = true
+
+[nix_shell]
+disabled = false
+impure_msg = "devbox"
+style = "bold purple"
+symbol = " "
+
+[package]
+disabled = true
+symbol = "󰏗 "
+
+[python]
+disabled = false
+symbol = " "
+
+[ruby]
+disabled = false
+symbol = " "
+
+[rust]
+disabled = false
+symbol = "󱘗 "
+
+[shell]
+disabled = true
+zsh_indicator = ""
+
+[sudo]
+disabled = false
+
+[time]
+disabled = false
